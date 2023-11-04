@@ -1,0 +1,36 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+.container h2 {
+  color: #007bff;
+  margin-bottom: 0px;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+.container form label {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.container form input, .container form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+}
+.container form input[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container form input[type=submit]:hover {
+  background-color: #6c757d;
+}/*# sourceMappingURL=forms.css.map */
