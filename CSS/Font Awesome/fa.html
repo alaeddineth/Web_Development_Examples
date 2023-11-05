@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Awesome Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .fa-5x {
+            font-size: 5em;
+            animation: fa-spin 1s infinite linear;
+        }
+        .fa-spin-custom {
+            animation: fa-spin 2s infinite linear;
+        }
+        @keyframes fa-spin  {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fa-5x  {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+       
+        .custom-color {
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font Awesome Icons Example</h1>
+    <p>Check out some Font Awesome icons:</p>
+    <i class="fas fa-5x fa-anchor"></i>
+    <i class="fas fa-3x fa-heart fa-spin-custom"></i>
+    <i class="fas fa-2x fa-bicycle custom-color"></i>
+</body>
+</html>

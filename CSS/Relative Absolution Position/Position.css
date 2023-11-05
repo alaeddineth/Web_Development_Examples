@@ -7,21 +7,22 @@
 
 .static {
     position: static;
+    top : 20px;
     background-color: lightblue;
 }
 
 .relative {
     position: relative;
     background-color: lightgreen;
-    top: 60px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
 }
 
 .absolute {
     position: absolute;
     background-color: lightcoral;
-    top: 60px;
-    right: 150px;
+     top: 0px;
+    left: 10px; 
 }
 
 .fixed {
