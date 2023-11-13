@@ -18,7 +18,6 @@ This repository contains a variety of small projects aimed at helping beginner s
    - Description: Learn basic JavaScript concepts and syntax.
    - Directory: [project-3-js-essentials](/JavaScript)
 
-4. ... (Add more projects as needed)
 
 ## Getting Started
 
@@ -26,3 +25,24 @@ This repository contains a variety of small projects aimed at helping beginner s
 
    ```bash
    git clone https://github.com/alaeddineth/Web_Development_Examples.git
+## Additional Resources
+
+Feel free to explore additional resources to enhance your learning journey:
+
+- [GoMyCode Training Center](https://www.gomycode.co/)
+
+## Feedback
+
+If you have any questions, feedback, or suggestions, please feel free to open an issue on this repository. Your input is highly valued!
+
+## Contributions
+
+If you'd like to contribute to this project:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-new-thing`.
+3. Make your changes and commit them: `git commit -m 'Add feature/new thing'`.
+4. Push to the branch: `git push origin feature-new-thing`.
+5. Open a pull request.
+
+Your contributions are always welcome! 😊
