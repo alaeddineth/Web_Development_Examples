@@ -1,8 +1,12 @@
 # Web Development Projects Repository
 
-Welcome to the Web Development Projects Repository for GoMyCode Training Center! 🚀
 
-This repository contains a variety of small projects aimed at helping beginner students understand the basics of HTML, CSS, and JavaScript.
+I'm [THELJANI Alaeddine], a experienced web developer with a passion for inspiring the next generation of coders. As a dedicated instructor at GoMyCode, I find immense joy in demystifying the world of web development for beginners.
+
+This repository is a culmination of my professional experience, carefully curated to provide beginner students with hands-on projects that unravel the basics of HTML, CSS, and JavaScript. Through these projects, my aim is to not only teach coding skills but also to ignite a curiosity and passion for the limitless possibilities within the world of web development.
+
+Feel free to explore the projects, and if you have any questions or feedback, don't hesitate to reach out. Let's embark on this coding journey together! Happy coding! 🌐✨
+
 
 ## Projects
 
