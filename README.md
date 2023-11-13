@@ -8,15 +8,15 @@ This repository contains a variety of small projects aimed at helping beginner s
 
 1. **Project 1: HTML Basics**
    - Description: Introduction to HTML tags and structure.
-   - Directory: [project-1-html-basics](./project-1-html-basics)
+   - Directory: [project-1-html-basics](/HTML)
 
 2. **Project 2: CSS Styling**
    - Description: Apply styles to HTML elements using CSS.
-   - Directory: [project-2-css-styling](./project-2-css-styling)
+   - Directory: [project-2-css-styling](/CSS)
 
 3. **Project 3: JavaScript Essentials**
    - Description: Learn basic JavaScript concepts and syntax.
-   - Directory: [project-3-js-essentials](./project-3-js-essentials)
+   - Directory: [project-3-js-essentials](/JavaScript)
 
 4. ... (Add more projects as needed)
 
