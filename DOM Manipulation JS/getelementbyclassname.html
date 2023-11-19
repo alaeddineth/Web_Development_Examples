@@ -1,0 +1,25 @@
+<!--
+getElementsByClassName() returns a live HTMLCollection of elements with the 
+given class name.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>getElementsByClassName Example</title>
+</head>
+<body>
+
+<p class="exampleClass">Paragraph 1</p>
+<p class="exampleClass">Paragraph 2</p>
+
+<script>
+  const elements = document.getElementsByClassName('exampleClass');
+  Array.from(elements).forEach(element => console.log(element.textContent));
+  // Outputs:
+  // Paragraph 1
+  // Paragraph 2
+</script>
+
+</body>
+</html>

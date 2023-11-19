@@ -1,0 +1,14 @@
+Key Differences:
+*querySelector() returns the first element that matches the specified selector,
+ while getElementById() returns the element with the specified ID.
+
+*querySelectorAll() returns a NodeList of all elements that match a selector,
+ whereas getElementsByClassName() and getElementsByTagName() return HTMLCollections.
+
+*querySelector() and querySelectorAll() accept any valid CSS selector, providing more 
+flexibility in element selection. The others are more specialized methods for selecting 
+elements by ID, class, or tag name.
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript String Methods and Properties Example</title>
+</head>
+<body>
+
+<script>
+  // Define a sample string
+  const sampleString = 'Hello, World!';
+
+  // String properties
+  const stringLength = sampleString.length;
+  const firstCharacter = sampleString[0];
+  const lastCharacter = sampleString[sampleString.length - 1];
+
+  console.log(`Original String: ${sampleString}`);
+  console.log(`Length of the String: ${stringLength}`);
+  console.log(`First Character: ${firstCharacter}`);
+  console.log(`Last Character: ${lastCharacter}`);
+
+  // String methods
+  const upperCaseString = sampleString.toUpperCase();
+  const lowerCaseString = sampleString.toLowerCase();
+  const indexOfWorld = sampleString.indexOf('World');
+  const replacedString = sampleString.replace('World', 'GPT-3');
+
+  console.log(`Uppercase: ${upperCaseString}`);
+  console.log(`Lowercase: ${lowerCaseString}`);
+  console.log(`Index of 'World': ${indexOfWorld}`);
+  console.log(`After Replacement: ${replacedString}`);
+</script>
+
+</body>
+</html>

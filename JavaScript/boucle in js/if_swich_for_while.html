@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Control Flow Example</title>
+</head>
+<body>
+
+<script>
+  // Function to categorize days of the week
+  function categorizeDay(dayNumber) {
+    let dayCategory;
+
+    // Using if statements
+    if (dayNumber >= 1 && dayNumber <= 5) {
+      dayCategory = 'Weekday';
+    } else if (dayNumber === 6 || dayNumber === 7) {
+      dayCategory = 'Weekend';
+    } else {
+      dayCategory = 'Invalid day number';
+    }
+
+    // Using a switch statement for additional categorization
+    switch (dayNumber) {
+      case 1:
+        dayCategory += ' (Monday)';
+        break;
+      case 2:
+        dayCategory += ' (Tuesday)';
+        break;
+      case 3:
+        dayCategory += ' (Wednesday)';
+        break;
+      case 4:
+        dayCategory += ' (Thursday)';
+        break;
+      case 5:
+        dayCategory += ' (Friday)';
+        break;
+      case 6:
+        dayCategory += ' (Saturday)';
+        break;
+      case 7:
+        dayCategory += ' (Sunday)';
+        break;
+      default:
+        dayCategory = 'Invalid day number';
+    }
+
+    return dayCategory;
+  }
+
+  // Using a loop to iterate through days and display the category
+  for (let dayNumber = 1; dayNumber <= 8; dayNumber++) {
+    const dayCategory = categorizeDay(dayNumber);
+    console.log(`Day ${dayNumber}: ${dayCategory}`);
+  }
+</script>
+
+</body>
+</html>

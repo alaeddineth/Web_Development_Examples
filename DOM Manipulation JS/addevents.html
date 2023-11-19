@@ -1,0 +1,22 @@
+// first way
+<button onclick=foo>Alert</button>
+ // the second way
+<div id="main">
+ <button>Alert</button>
+</div>
+<script>
+ // Getting the button
+ var btn = document.querySelector('button');
+ btn.onclick=foo;
+</script>
+// the third way
+<div id="main">
+ <button >Alert</button>
+</div>
+<script>
+   // Getting the button
+   var btn = document.querySelector('button');
+   btn.addEventListener('click', foo);
+//we have three ways -onclick=functionname as an attribute in the tag, 2nd way we call the button
+//using document.queryselector and we use btn.onclick=function
+</script>
