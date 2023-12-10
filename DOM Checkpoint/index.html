@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    #shopping-cart {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    .heart-icon {
+      cursor: pointer;
+    }
+
+    #total-price {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #new-item-form {
+      margin-top: 20px;
+    }
+
+    #new-item-form input,
+    #new-item-form button {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="shopping-cart">
+    <!-- Sample items (replace with your actual items) -->
+    <div class="cart-item" data-id="1">
+      <span>Pizza </span>
+      <button class="quantity-btn" onclick="updateQuantity(1, 'decrease')">-</button>
+      <span class="quantity">1</span>
+      <button class="quantity-btn" onclick="updateQuantity(1, 'increase')">+</button>
+      <span class="heart-icon" onclick="toggleLike(1)">❤️</span>
+      <button onclick="deleteItem(1)">Delete</button>
+      <span class="price">$10.00</span>
+    </div>
+
+    <div class="cart-item" data-id="2">
+      <span>Humburger </span>
+      <button class="quantity-btn" onclick="updateQuantity(2, 'decrease')">-</button>
+      <span class="quantity">2</span>
+      <button class="quantity-btn" onclick="updateQuantity(2, 'increase')">+</button>
+      <span class="heart-icon" onclick="toggleLike(2)">❤️</span>
+      <button onclick="deleteItem(2)">Delete</button>
+      <span class="price">$20.00</span>
+    </div>
+
+    <!-- Add more items as needed -->
+
+    <div id="total-price">Total: $30.00</div>
+
+    <!-- Add new item form -->
+    <form id="new-item-form">
+      <label for="new-item-name">New Item Name:</label>
+      <input type="text" id="new-item-name" required>
+      <button type="button" onclick="addNewItem()">Add New Item</button>
+    </form>
+  </div>
+
+  <script>
+    function updateQuantity(itemId, action) {
+      const quantityElement = document.querySelector(`[data-id="${itemId}"] .quantity`);
+      let quantity = parseInt(quantityElement.textContent);
+
+      if (action === 'increase') {
+        quantity++;
+      } else if (action === 'decrease' && quantity > 1) {
+        quantity--;
+      }
+
+      quantityElement.textContent = quantity;
+      updateTotalPrice();
+    }
+
+    function toggleLike(itemId) {
+      const heartIcon = document.querySelector(`[data-id="${itemId}"] .heart-icon`);
+      heartIcon.classList.toggle('liked');
+    }
+
+    function deleteItem(itemId) {
+      const itemElement = document.querySelector(`[data-id="${itemId}"]`);
+      itemElement.remove();
+      updateTotalPrice();
+    }
+
+    function updateTotalPrice() {
+      const totalPriceElement = document.getElementById('total-price');
+      let totalPrice = 0;
+
+      document.querySelectorAll('.cart-item').forEach(item => {
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
+        totalPrice += quantity * price;
+      });
+
+      totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
+
+    function addNewItem() {
+      const newItemName = document.getElementById('new-item-name').value;
+
+      if (newItemName.trim() === '') {
+        alert('Please enter a valid item name.');
+        return;
+      }
+
+      // Create a new item and append it to the shopping cart
+      const newItemId = Date.now(); // Unique ID for the new item
+      const newItem = document.createElement('div');
+      newItem.classList.add('cart-item');
+      newItem.setAttribute('data-id', newItemId);
+      newItem.innerHTML = `
+        <span>${newItemName}</span>
+        <button class="quantity-btn" onclick="updateQuantity(${newItemId}, 'decrease')">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn" onclick="updateQuantity(${newItemId}, 'increase')">+</button>
+        <span class="heart-icon" onclick="toggleLike(${newItemId})">❤️</span>
+        <button onclick="deleteItem(${newItemId})">Delete</button>
+        <span class="price">$10.00</span>
+      `;
+
+      document.getElementById('shopping-cart').insertBefore(newItem, document.getElementById('total-price'));
+
+      // Clear the input field
+      document.getElementById('new-item-name').value = '';
+
+      updateTotalPrice();
+    }
+  </script>
+</body>
+</html>
