@@ -1,0 +1,34 @@
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #bc3415;
+// Define mixin1
+@mixin button-styles {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// Apply styles using nesting and mixins
+.container {
+  text-align: center;
+  margin: 50px;
+  h1 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $secondary-color;
+    font-size: 18px;
+  }
+  .btn {
+    @include button-styles;
+    margin-top: 20px;
+  }
+}

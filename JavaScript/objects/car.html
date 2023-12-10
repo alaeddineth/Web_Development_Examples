@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Object Example</title>
+</head>
+<body>
+
+<script>
+  // Define a car object with properties and methods
+  const car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'Silver',
+    kilometrage : 70000,
+
+    // Method to display information about the car
+    displayInfo: function() {
+      console.log(`Car Information:
+        Make: ${this.make}
+        Model: ${this.model}
+        Year: ${this.year}
+        Color: ${this.color}
+        kilometrage: ${this.kilometrage}`);
+    }
+  };
+
+  // Accessing object properties
+  console.log(`Make: ${car.make}+ Model :: ${car.model}`);
+  console.log(`Model: ${car.model}`);
+  console.log(`Year: ${car.year}`);
+  console.log(`Color: ${car.color}`);
+  console.log(`kilometrage: ${car.kilometrage}`);
+  // Calling object method to display information
+  car.displayInfo();
+</script>
+
+</body>
+</html>

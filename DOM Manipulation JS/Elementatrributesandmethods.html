@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelector Example</title>
+  <style>
+    /* Adding some styles for demonstration */
+    #exampleDiv {
+      color: blue;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="exampleDiv">Hello, World!</div>
+
+<script>
+  // Select the element using querySelector
+  const element = document.querySelector('#exampleDiv');
+
+  // Properties
+  console.log('Element ID:', element.id);
+  console.log('Element Tag Name:', element.tagName);
+  console.log('Element Class Name:', element.className);
+
+  // Methods
+  // Add a CSS class to the element
+  element.classList.add('newClass');
+
+  // Check if the element has a specific CSS class
+  console.log('Has "newClass":', element.classList.contains('newClass'));
+
+  // Remove the CSS class
+  element.classList.remove('newClass');
+
+  // Toggle the CSS class (add if not present, remove if present)
+  element.classList.toggle('toggleClass');
+
+  // Set an attribute
+  element.setAttribute('data-custom', 'customValue');
+
+  // Get the attribute value
+  console.log('data-custom attribute:', element.getAttribute('data-custom'));
+
+  // Remove the attribute
+  element.removeAttribute('data-custom');
+
+  // Check if the element has an attribute
+  console.log('Has data-custom attribute:', element.hasAttribute('data-custom'));
+</script>
+
+</body>
+</html>

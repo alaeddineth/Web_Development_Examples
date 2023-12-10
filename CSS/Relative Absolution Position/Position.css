@@ -1,0 +1,33 @@
+.container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border: 2px solid black;
+}
+
+.static {
+    position: static;
+    top : 20px;
+    background-color: lightblue;
+}
+
+.relative {
+    position: relative;
+    background-color: lightgreen;
+    top: 0px;
+    left: 0px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: lightcoral;
+     top: 0px;
+    left: 10px; 
+}
+
+.fixed {
+    position: fixed;
+    background-color: lightyellow;
+    bottom: 20px;
+    right: 20px;
+}

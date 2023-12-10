@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  margin: 50px;
+}
+.container h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.container p {
+  color: #bc3415;
+  font-size: 18px;
+}
+.container .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.container .btn:hover {
+  background-color: #bc3415;
+}/*# sourceMappingURL=sass.css.map */
